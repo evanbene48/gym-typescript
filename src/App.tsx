@@ -1,17 +1,27 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Navbar from './scenes/navbar/Navbar'
+import { SelectedPage } from './shared/types'
+
+// +
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
+    SelectedPage.Home
+  )
 
+  // const [selectedPage, setSelectedPage] = useState<string>("home")
+  //code diatas bisa juga ditulis seperti ini
+  // const [selectedPage, setSelectedPage] = useState("home")
+  //ini bisa dikarenakan sleectedPage returnnya string
+
+  console.log(selectedPage)
   return (
-    <>
-      <div className='app bg-gray-400'>
-        app
-      </div>
-    </>
+    <div className='app bg-gray-20'>
+      <Navbar 
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
+    </div>
   )
 }
 
