@@ -65,7 +65,7 @@ const OurClasses = ({
     <section 
     id="ourclasses" 
     className="w-full 
-    bg-primary-100 py-40"
+    bg-primary-100 py-52"
     >
         <motion.div
         onViewportEnter={()=>setSelectedPage(SelectedPage.OurClasses)}
